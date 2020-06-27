@@ -3,6 +3,11 @@
 
 using namespace std;
 
+bool numIsEven(int n)
+{
+	return (n & 1);
+}
+
 bool numIsNegetive(int n)
 {
 	auto sz = sizeof(n)*8 -1;
@@ -26,12 +31,17 @@ int main(int argc, char **argv)
 {
 	int n;
 
-	cout << "Enter Number : ";
+	cout << "Enter Number(odd/even test) : ";
+	cin >> n;
+
+	numIsEven(n)?(cout << "Number is odd" << endl):(cout << "Number is even" << endl);
+
+	cout << "Enter Number(+/- number test) : ";
 	cin >> n;
 
 	numIsNegetive(n)?(cout << "Number is negative" << endl):(cout << "Number is positive" << endl);
 
-	cout << "Enter Number : ";
+	cout << "Enter Number(find absolute value) : ";
 	cin >> n;
 
 	getAbsOfNumber(n);
